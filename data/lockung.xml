@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:mei="http://www.music-encoding.org/ns/mei">
+
+     <teiHeader>
+   		<fileDesc>
+   			<titleStmt>
+   				<title type="main">Fanny Hensel's Gartenlieder: </title>
+   				<title type="subordinate">An Electronic Edition</title>
+   				<author>
+   					<name>Hensel, Fanny Mendelssohn, 1805-1847</name>
+   				</author>
+   				<editor>
+   					<name>Giannetti, Francesca</name>
+   				</editor>
+   			</titleStmt>
+   			<editionStmt>
+   				<edition>2018-06-15</edition>
+   			</editionStmt>
+   			<publicationStmt>
+   				<availability>
+   					<p>Usable according to the Creative Commons License <ref target="https://creativecommons.org/licenses/by/3.0/">Attribution 3.0 Unported</ref>.</p>
+   				</availability>
+   				<idno>Op. 3</idno>
+   			</publicationStmt>
+   			<sourceDesc>
+          <list>
+            <head>Bibliography</head>
+            <bibl xml:id="bote_und_bock">
+              <author>Fanny Hensel, geb. Mendelssohn-Bartholdy</author>
+   						<title level="a">Gartenlieder : Sechs Gesänge für Sopran, Alt, Tenor, und Bass</title>
+              <publisher>Ed. Bote &amp; G. Bock</publisher>
+              <date>1847</date>
+              <ptr target='http://www3.cpdl.org/wiki/index.php/Lockung,_Op._3,_No._1_(Fanny_Hensel)'/>
+            </bibl>
+            <bibl xml:id="reclam">
+              <author>Eichendorff, Joseph, Freiherr von, 1788-1857</author>
+              <title level="a">Gedichte von Joseph Freiherrn von Eichendorff</title>.
+              <title level="m">Gesamtausgabe. Mit biographisch-litterarischer Einleitung von Franz Brümmer.</title>
+              <publisher>Philipp Reclam</publisher>
+              <date>189?</date>
+              <ptr target="https://hdl.handle.net/2027/njp.32101061809404" />
+            </bibl>
+          </list>
+   			</sourceDesc>
+   		</fileDesc>
+   		<encodingDesc>
+   			<editorialDecl>
+   				<hyphenation eol="none">
+   					<p>Dashes have been rendered as two hyphens.</p>
+   				</hyphenation>
+   				<normalization method="silent">
+   					<p>Page numbers appear at the beginning of each page, no matter where originally placed.</p>
+   				</normalization>
+   			</editorialDecl>
+   			<tagsDecl>
+   				<rendition xml:id="indent1" scheme="css">margin-left: 1.5em;</rendition>
+   				<rendition xml:id="indent2" scheme="css">margin-left: 2.5em;</rendition>
+   				<rendition xml:id="center" scheme="css">text-align: center;</rendition>
+   			</tagsDecl>
+   		</encodingDesc>
+   		<revisionDesc>
+   			<change>
+   				<label>Changed by the editor</label>
+   				<name>Giannetti, Francesca</name>
+   				<date>2018-06-14</date>
+   			</change>
+   		</revisionDesc>
+   	</teiHeader>
+    <text>
+      <body>
+<!--
+        <notatedMusic>
+          <mei:mei>
+          </mei:mei>
+        </notatedMusic>
+-->
+        <ab>
+          <supplied reason="just-because">
+            <head>Lockung</head>
+            <byline>by Joseph von Eichendorff</byline>
+
+            <lg type="stanza" rendition="#indent2">
+              <l>Hörst du nicht die Bäume rauschen</l>
+              <l>Draußen durch die stille Rund<app><rdg wit="#reclam">'</rdg><rdg wit="#bote_und_bock"/></app>?</l>
+              <l>Lockt<app><rdg wit="#reclam">'s</rdg><rdg wit="#bote_und_bock"/></app> dich<app><rdg wit="#bote_und_bock">s</rdg><rdg wit="#reclam"/></app> nicht hinabzulauschen</l>
+              <l>Von dem Söller in den Grund,</l>
+              <l>Wo die vielen Bäche gehen</l>
+              <l>Wunderbar im Mondenschein</l>
+              <l>Und die stillen <app><rdg wit="#reclam">Schlösser</rdg><rdg wit="#bote_und_bock">Burgen</rdg></app> sehen</l>
+              <l>In den Fluß vom hohen Stein<app><rdg wit="#reclam">?</rdg><rdg wit="#bote_und_bock">.</rdg></app></l>
+            </lg>
+            <lg type="stanza" rendition="#indent2">
+              <l>Kennst du noch die <app><rdg wit="#reclam">irren</rdg><rdg wit="#bote_und_bock">süssen</rdg></app> Lieder</l>
+              <l>Aus der alten schönen Zeit?</l>
+              <l>Sie erwachen alle wieder</l>
+              <l>Nachts in Waldeseinsamkeit,</l>
+              <l>Wenn die Bäume träumend lauschen</l>
+              <l>Und der Flieder duftet schwül</l>
+              <l>Und im Fluß die Nixen rauschen -- </l>
+              <l>Komm herab, hier ist's so kühl.</l>
+            </lg>
+          </supplied>
+        </ab>
+    </body>
+  </text>
+</TEI>
