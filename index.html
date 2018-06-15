@@ -7,7 +7,7 @@
     <meta name="description" content="My project">
     <meta name="author" content="Me">
     <link rel="stylesheet" href="css/style.css" media="all" />
-    <link rel="stylesheet" href="CETEIcean.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="css/CETEIcean.css" media="screen" charset="utf-8">
     <script src="js/verovio-toolkit.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/CETEI.js"></script>
@@ -19,6 +19,7 @@
       <!-- ADD YOUR HTML CONTENT HERE! -->
       <h1>Fanny Hensel's Gartenlieder:</h1>
       <h3>An Electronic Edition</h3>
+      <button id="rdgs" data-rdg="#bote_und_bock">Toggle readings</button>
     </div>
 
     <div id="TEI"></div>
@@ -36,11 +37,61 @@
       document.getElementById("TEI").innerHTML = "";
       document.getElementById("TEI").appendChild(data);
       CETEIcean.addStyle(document, data);
+
+      var rdgs = document.querySelectorAll("tei-rdg[wit='#bote_und_bock']")
+      for (i=0; i<rdgs.length; i++) {
+          rdgs[i].style.display = 'inline'
+      }
+
+      document.querySelector("#rdgs").addEventListener("click", function(e) {
+
+        var rdg = e.target.getAttribute("data-rdg")
+        if (rdg === "#bote_und_bock") {
+          var rdgs = document.querySelectorAll("tei-rdg[wit='#bote_und_bock']")
+          for (i=0; i<rdgs.length; i++) {
+              rdgs[i].style.display = 'none'
+          }
+          var rdgs = document.querySelectorAll("tei-rdg[wit='#reclam']")
+          for (i=0; i<rdgs.length; i++) {
+              rdgs[i].style.display = 'inline'
+          }
+          e.target.setAttribute("data-rdg", "#reclam")
+        } else {
+          var rdgs = document.querySelectorAll("tei-rdg[wit='#bote_und_bock']")
+          for (i=0; i<rdgs.length; i++) {
+              rdgs[i].style.display = 'inline'
+          }
+          var rdgs = document.querySelectorAll("tei-rdg[wit='#reclam']")
+          for (i=0; i<rdgs.length; i++) {
+              rdgs[i].style.display = 'none'
+          }
+          e.target.setAttribute("data-rdg", "#bote_und_bock")
+        }
+      })
+
     });
     // Alternatively, use then()
     // (new CETEI).getHTML5('testTEI.xml').then(function(data){
     //   document.getElementById("TEI").appendChild(data);
     // });
+
+    c.addBehaviors({"handlers":{
+        // Overrides the default ptr behavior, displaying a short link
+        "ptr": function(elt) {
+          var link = document.createElement("a");
+          link.innerHTML = elt.getAttribute("target").replace(/https?:\/\/([^\/]+)\/.*/, "$1");
+          link.href = elt.getAttribute("target");
+          return link;
+        },
+        // Adds a new handler for <term>, wrapping it in an HTML <b>
+        "term": function(elt) {
+            var b = document.createElement("b");
+            b.innerHTML = elt.innerHTML;
+            return b;
+        },
+        // Inserts the first array element before tei:add, and the second, after.
+        "add": ["`","´"]
+      }});
     </script>
   </body>
 
