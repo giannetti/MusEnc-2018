@@ -20,4 +20,4 @@ options = {
 vrvToolkit.setOptions(options)
 
 /* Show the score */
-showScore('score', 'data/Hensel_Lockung_Op3_No1.mei') // <-- CHANGE THIS TO YOUR FILE
+showScore('score', 'data/Hensel_Lockung_Op3_No1_edited.xml') // <-- CHANGE THIS TO YOUR FILE
