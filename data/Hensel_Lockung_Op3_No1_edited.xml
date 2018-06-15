@@ -1828,7 +1828,7 @@
                                 <note xml:id="m-1121" dur="4" dur.ges="256p" oct="4" pname="a" pnum="69" stem.dir="up">
                                     <accid xml:id="m-1122" accid="n"/>
                                     <verse xml:id="m-1133" n="1">
-                                        <ref target="#bote_und_bock"><syl xml:id="m-1134" con="d" wordpos="i">Bur</syl></ref>
+                                      <syl xml:id="m-1134" con="d" wordpos="i">Bur</syl>
                                     </verse>
                                 </note>
                                 <note xml:id="m-1123" dur="4" dur.ges="256p" oct="4" pname="a" pnum="69" stem.dir="up">
